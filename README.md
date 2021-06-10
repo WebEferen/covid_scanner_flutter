@@ -1,16 +1,49 @@
-# covid_scanner
+# European Covid Certificate Scanner
 
-A new Flutter project.
+This is a demo app which allows users to scan their certificate QR codes in order to add them into Apple Wallet (passkit) and Google Card.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Normal Flutter application requires dart, xCode and Android SDK to be built.
+To get started with flutter, please go to [Flutter.dev](https://flutter.dev/) and check how to get started.
 
-A few resources to get you started if this is your first Flutter project:
+### Installation
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+To install flutter dependencies, simply type:
+```
+flutter pub get
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+In order to analyze project You can type:
+```
+flutter analyze
+```
+
+### Run application
+
+There are multiple ways to start the application, to start it as simple as possible, simply type:
+```
+flutter run
+```
+
+## License
+
+Project is under MIT license, that means that it can be easily modified but it cannot be commercialised.
+
+## Roadmap
+
+### 1.0 Release
+
+- [ ] Add support for Android Google Card
+- [ ] onGenerateFailed, onGenerateSuccess screens
+- [ ] Read from QR image (device read)
+
+### 2.0 Release
+
+- [ ] BLoC pattern
+- [ ] Firebase connection implementation
+
+## Author
+
+Currently application authors are:
+- WebEferen [Michal Makowski](mailto://michal.makowski97@gmail.com)
