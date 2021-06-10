@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_config/flutter_config.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_wallet_card/flutter_wallet_card.dart';
 
 class GeneratorService {
 
   static generateUri({
-    required VoidCallback onGenerateSuccess,
+    Function(dynamic error)? onGenerateFailed,
+    VoidCallback? onGenerateSuccess,
     required String code,
     required String holder,
 
@@ -32,11 +33,16 @@ class GeneratorService {
     );
 
     try {
-      await launch(walletUri.toString(), forceWebView: true, universalLinksOnly: true, statusBarBrightness: Brightness.dark);
+      final bool isCardGenerated = await FlutterWalletCard.createPassFromUri(
+          scheme: walletUri.scheme,
+          host: walletUri.host,
+          path: walletUri.path,
+          parameters: walletUri.queryParameters
+      );
+
+      return isCardGenerated ? onGenerateSuccess!() : onGenerateFailed!(Exception('Generation Failed'));
     } catch(e) {
-      // print('Error');
-    } finally {
-      onGenerateSuccess();
+      onGenerateFailed!(e);
     }
   }
 
