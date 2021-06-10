@@ -46,7 +46,8 @@ class _InformationPageState extends State<InformationPage> {
         code: code,
         holder: _holderController.value.text,
         vaccineType: _vaccineController.value.text,
-        onGenerateSuccess: () => Navigator.pushNamedAndRemoveUntil(context, InitPage.pageName, (_) => false)
+        onGenerateSuccess: () => Navigator.pushNamedAndRemoveUntil(context, InitPage.pageName, (_) => false),
+        onGenerateFailed: (e) => print(e)
     );
   }
 
