@@ -21,10 +21,21 @@ flutter analyze
 
 ### Run application
 
+At first, copy ***.env.example*** into ***.env*** and update existing variables such as:
+```dotenv
+WALLET_SCHEME=https
+WALLET_HOST=passkit-test.herokuapp.com
+WALLET_PATH=/api/wallet
+```
+Those variables are for the testing model generation, so feel free to use it!
+
+
 There are multiple ways to start the application, to start it as simple as possible, simply type:
 ```
 flutter run
 ```
+
+### Wallet
 
 ## License
 
