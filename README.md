@@ -23,9 +23,9 @@ flutter analyze
 
 At first, copy ***.env.example*** into ***.env*** and update existing variables such as:
 ```dotenv
-WALLET_SCHEME=https
-WALLET_HOST=passkit-test.herokuapp.com
-WALLET_PATH=/api/wallet
+WALLET_URI_SCHEME=https
+WALLET_URI_HOST=passkit-test.herokuapp.com
+WALLET_URI_PATH=/api/wallet
 ```
 Those variables are for the testing model generation, so feel free to use it!
 
