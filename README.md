@@ -54,6 +54,10 @@ Project is under MIT license, that means that it can be easily modified but it c
 - [ ] BLoC pattern
 - [ ] Firebase connection implementation
 
+## Changelog
+
+Refer to the [Changelog](https://github.com/WebEferen/covid_scanner_flutter/blob/master/CHANGELOG.md) to get all release notes.
+
 ## Author
 
 Currently application authors are:
